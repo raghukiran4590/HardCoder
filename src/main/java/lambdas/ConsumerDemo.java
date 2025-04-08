@@ -8,6 +8,8 @@ import java.util.function.Consumer;
 
 public class ConsumerDemo {
 
+    // Consumer<T> interface has accept() method and takes an input and applies logic but does not return any output.
+
     public static void main(String[] args) {
         int i = 10;
         Consumer<Integer> consumer = t -> System.out.println(String.format("Printing : %s", t));
