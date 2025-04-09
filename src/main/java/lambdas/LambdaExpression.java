@@ -1,6 +1,6 @@
 package lambdas;
 
-public class Expression {
+public class LambdaExpression {
     public static void main(String[] args) {
         Runnable runnable = () -> {
             System.out.println("Lambda Expression");
