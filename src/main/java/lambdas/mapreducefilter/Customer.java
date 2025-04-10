@@ -1,6 +1,7 @@
 package lambdas.mapreducefilter;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Customer {
 
@@ -14,6 +15,16 @@ public class Customer {
         this.name = name;
         this.email = email;
         this.phoneNumbers = phoneNumbers;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumbers=" + phoneNumbers +
+                '}';
     }
 
     public int getId() {
@@ -32,8 +43,8 @@ public class Customer {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public Optional<String> getEmail() {
+        return Optional.ofNullable(email);
     }
 
     public void setEmail(String email) {
