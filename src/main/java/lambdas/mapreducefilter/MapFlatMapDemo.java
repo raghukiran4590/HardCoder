@@ -3,6 +3,7 @@ package lambdas.mapreducefilter;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class MapFlatMapDemo {
@@ -13,7 +14,7 @@ public class MapFlatMapDemo {
 //        use flatmap() function to flatten and return customer phone numbers
 
         List<Customer> allCustomers = EkartDatabase.getAllCustomers();
-        List<String> customerEmailList = allCustomers.stream().map(Customer::getEmail).collect(Collectors.toList());
+        List<Optional<String>> customerEmailList = allCustomers.stream().map(Customer::getEmail).collect(Collectors.toList());
 //        System.out.println(customerEmailList);
         List<String> customerPhoneNumbers = allCustomers.stream()
                 .flatMap(customer -> customer.getPhoneNumbers().stream())
@@ -21,6 +22,7 @@ public class MapFlatMapDemo {
         System.out.println(customerPhoneNumbers);
         Collections.reverse(customerPhoneNumbers);
         System.out.println(customerPhoneNumbers);
+
 
     }
 }
