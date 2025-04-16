@@ -1,10 +1,12 @@
 package streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TerminalStreamsOps {
 
@@ -24,9 +26,25 @@ public class TerminalStreamsOps {
         //ForEach
         list.stream().forEach(System.out::println);
 
+        //forEachOrdered in case of parallel stream
+        List<Integer> list2 = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        System.out.println("forEach print");
+        list2.parallelStream().forEach(System.out::print);
+        System.out.println("forEachOrdered print");
+        list2.parallelStream().forEachOrdered(System.out::print);
+
         //Reduce
         Optional<Integer> reduce = list.stream().reduce(Integer::sum);
         System.out.println(reduce.get());
+
+        //toArray
+        List<Integer> list1 = List.of(1, 2, 3, 4, 5);
+        Object[] listToArray = list1.toArray();
+
+        //Min/Match
+        System.out.println(Stream.of(1,45,67,24,66,88,74).min(Comparator.naturalOrder()).get());
+        System.out.println(Stream.of(1,45,67,24,66,88,74).max(Comparator.naturalOrder()).get());
+        System.out.println(Stream.of(1,45,67,24,66,88,74).min((a, b)-> b-a).get());
 
         //Short Circuit Methods
         //anyMatch, allMatch, noneMatch
@@ -64,7 +82,12 @@ public class TerminalStreamsOps {
         long count = sentence.chars().filter(x -> x == 'l').count();
         System.out.println(count);
 
+        //Stream cannot be reused after a terminal operation has been called
+
+
         //Stateful and Stateless
+
+
 
 
 
