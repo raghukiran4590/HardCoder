@@ -14,7 +14,7 @@ public class OneToMany {
         private String name;
 
         //This makes the employees collection to load lazily or eagerly
-        @OneToMany(mappedBy = "department", fetch = fetchType.LAZY/EAGER) 
+        @OneToMany(mappedBy = "department", fetch = fetchType.LAZY/EAGER)
         private List<Employee> employees = new ArrayList<>();
 
         // Getters and setters
