@@ -26,6 +26,6 @@
         <property name="hibernate.format_sql">true</property>
 
         <!-- Mapped class -->
-        <mapping class="com.example.User"/>
+        <mapping class="hibernate.HibernateEntityClass"/>
     </session-factory>
 </hibernate-configuration>
