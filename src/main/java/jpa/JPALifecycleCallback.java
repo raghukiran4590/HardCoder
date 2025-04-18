@@ -1,6 +1,6 @@
 package jpa;
 
-public class JPACallback {
+public class JPALifecycleCallback {
 
 /*    @Entity
     @NamedQueries({
