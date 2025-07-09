@@ -35,7 +35,8 @@ public class SortingList {
         //Using stream().sorted(comparator)
 //        employeeList.stream().sorted(Comparator.comparing(employee -> employee.getSalary())).forEach(System.out::println);
         //Using stream().sorted(comparator.methodReference)
-          employeeList.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);
+            employeeList.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);
+            employeeList.stream().sorted(Comparator.comparing(Employee::getName)).toList();
     }
 
 }

@@ -1,7 +1,7 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class HashMapDemo {
 
@@ -10,7 +10,7 @@ public class HashMapDemo {
         // LRU Cache Implementation
         // Stack implementation using linkedlist
         // Queue implementation using linkedlist
-        // Producer- Consumer implmentation using blockingqueue
-
+        // Producer- Consumer implementation using blockingqueue
+        // Map<Integer, Integer> synchronizedMap = Collections.synchronizedMap(new HashMap<>());
     }
 }

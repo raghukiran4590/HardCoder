@@ -82,6 +82,7 @@ public class TerminalStreamsOps {
         long count = sentence.chars().filter(x -> x == 'l').count();
         System.out.println(count);
 
+
         //Stream cannot be reused after a terminal operation has been called
 
 
