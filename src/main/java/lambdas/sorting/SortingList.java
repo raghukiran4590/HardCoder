@@ -15,7 +15,7 @@ public class SortingList {
         list.add(12);
         list.add(15);
         list.add(2);
-
+//        list.sort((a,b) -> a-b);
         //Using Collections.sort method
 //        System.out.println(list);
         Collections.sort(list); //Ascending Order

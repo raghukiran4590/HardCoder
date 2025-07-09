@@ -49,6 +49,7 @@ public class CollectorsDemo {
         System.out.println(words.stream().collect(Collectors.groupingBy(String::length)));
         System.out.println(words.stream().collect(Collectors.groupingBy(String::length, Collectors.joining(", "))));
         System.out.println(words.stream().collect(Collectors.groupingBy(String::length, Collectors.counting())));
+//        System.out.println(words.stream().collect(Collectors.groupingBy(String::length,Collectors.counting())));
         TreeMap<Integer, Long> treeMap = words.stream().collect(Collectors.groupingBy(String::length, TreeMap::new, Collectors.counting()));
         System.out.println(treeMap);
 
