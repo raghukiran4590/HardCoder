@@ -11,6 +11,14 @@ public class Employee implements Comparable<Employee> {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(id,name);
