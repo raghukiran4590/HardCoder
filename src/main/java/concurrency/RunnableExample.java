@@ -1,9 +1,5 @@
 package concurrency;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 public class RunnableExample implements Runnable {
     @Override
     public void run() {
@@ -17,7 +13,12 @@ public class RunnableExample implements Runnable {
             thread.start();
 
             RunnableExample runnableExample = new RunnableExample();
-        Thread thread1 = new Thread(runnableExample);
-        thread1.start();
+            Thread thread1 = new Thread(runnableExample);
+            thread1.start();
+
+            Runnable runnable = () -> {
+                System.out.println("Runnable Lambda Expression");
+            };
+            runnable.run();
     }
 }
